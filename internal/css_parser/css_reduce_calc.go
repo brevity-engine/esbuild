@@ -245,7 +245,7 @@ func (c *calcInvert) convertToToken(whitespace css_ast.WhitespaceFlags) (css_ast
 	}, true
 }
 
-func (c *calcNumeric) convertToToken(whitespace css_ast.WhitespaceFlags) (css_ast.Token, bool) {
+func (c *calcNumeric) convertToToken(_ css_ast.WhitespaceFlags) (css_ast.Token, bool) {
 	text, ok := floatToStringForCalc(c.number)
 	if !ok {
 		return css_ast.Token{}, false
@@ -269,7 +269,7 @@ func (c *calcNumeric) convertToToken(whitespace css_ast.WhitespaceFlags) (css_as
 	}
 }
 
-func (c *calcValue) convertToToken(whitespace css_ast.WhitespaceFlags) (css_ast.Token, bool) {
+func (c *calcValue) convertToToken(_ css_ast.WhitespaceFlags) (css_ast.Token, bool) {
 	t := c.token
 	t.Whitespace = 0
 	return t, true

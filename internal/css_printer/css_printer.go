@@ -317,7 +317,7 @@ func (p *printer) printComplexSelectors(selectors []css_ast.ComplexSelector, ind
 	}
 }
 
-func (p *printer) printCompoundSelector(sel css_ast.CompoundSelector, isFirst bool, isLast bool) {
+func (p *printer) printCompoundSelector(sel css_ast.CompoundSelector, isFirst bool, _ bool) {
 	if !isFirst && sel.Combinator == "" {
 		// A space is required in between compound selectors if there is no
 		// combinator in the middle. It's fine to convert "a + b" into "a+b"

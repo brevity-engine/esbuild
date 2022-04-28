@@ -32,7 +32,7 @@ func assertEqualStrings(t *testing.T, a string, b string) {
 	}
 }
 
-func lexToken(t *testing.T, contents string) T {
+func lexToken(_ *testing.T, contents string) T {
 	log := logger.NewDeferLog(logger.DeferLogNoVerboseOrDebug)
 	lexer := NewLexer(log, test.SourceForTest(contents), config.TSOptions{})
 	return lexer.Token

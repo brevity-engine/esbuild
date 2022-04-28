@@ -69,7 +69,7 @@ func (fs *mockFS) OpenFile(path string) (OpenedFile, error, error) {
 	return nil, syscall.ENOENT, syscall.ENOENT
 }
 
-func (fs *mockFS) ModKey(path string) (ModKey, error) {
+func (fs *mockFS) ModKey(_ string) (ModKey, error) {
 	return ModKey{}, errors.New("This is not available during tests")
 }
 
@@ -148,7 +148,7 @@ func (*mockFS) Rel(base string, target string) (string, bool) {
 	return commonParent + target, true
 }
 
-func (fs *mockFS) kind(dir string, base string) (symlink string, kind EntryKind) {
+func (fs *mockFS) kind(_ string, _ string) (symlink string, kind EntryKind) {
 	panic("This should never be called")
 }
 

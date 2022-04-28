@@ -1244,7 +1244,7 @@ const minItemCountPerIter = 64
 // The maximum number of intervals before a change is detected
 const maxIntervalsBeforeUpdate = 20
 
-func (w *watcher) start(logLevel LogLevel, color StderrColor, mode WatchMode) {
+func (w *watcher) start(logLevel LogLevel, color StderrColor, _ WatchMode) {
 	useColor := validateColor(color)
 
 	go func() {
