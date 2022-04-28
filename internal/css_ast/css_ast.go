@@ -310,7 +310,7 @@ type RAtImport struct {
 	ImportRecordIndex uint32
 }
 
-func (*RAtImport) Equal(rule R) bool {
+func (*RAtImport) Equal(_ R) bool {
 	return false
 }
 
