@@ -1,6 +1,10 @@
 version = 1
 
 [[analyzers]]
+name = "javascript"
+enabled = true
+
+[[analyzers]]
 name = "go"
 enabled = true
 
@@ -8,5 +12,5 @@ enabled = true
   import_root = "github.com/brevity-engine/esbuild"
 
 [[analyzers]]
-name = "javascript"
+name = "secrets"
 enabled = true
