@@ -5,6 +5,7 @@ declare const ESBUILD_VERSION: string;
 
 function validateTarget(target: string): string {
   target += ''
+  console.log("TEST COMMIT")
   if (target.indexOf(',') >= 0) throw new Error(`Invalid target: ${target}`)
   return target
 }
